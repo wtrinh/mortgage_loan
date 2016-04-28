@@ -1,0 +1,53 @@
+<%= form_for([@borrower, @declaration]) do |f| %>
+  <% if @declaration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@declaration.errors.count, "error") %> prohibited this declaration from being saved:</h2>
+
+      <ul>
+      <% @declaration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :federal_debt_default %>
+    <%= f.check_box :federal_debt_default_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :obligation %>
+    <%= f.check_box :obligation_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :down_payment_borrowed %>
+    <%= f.check_box :down_payment_borrowed_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :co_maker_endorser %>
+    <%= f.check_box :co_maker_endorser_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :us_citizen %>
+    <%= f.check_box :us_citizen_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :permanent_resident_alien %>
+    <%= f.check_box :permanent_resident_alien_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :occupy_as_primary_residence %>
+    <%= f.check_box :occupy_as_primary_residence_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :type_of_property_owned %>
+    <%= f.text_field :type_of_property_owned %>
+  </div>
+  <div class="field">
+    <%= f.label :title_holding_type %>
+    <%= f.text_field :title_holding_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  liability_id: 1
+  borrower_id: 1
+  company_name: MyString
+  company_address_line_1: MyString
+  company_address_line_2: MyString
+  company_city: MyString
+  company_state: MyString
+  company_zip_code: MyString
+  account_number: MyString
+  monthly_payment: 1.5
+  months_left_to_pay: 1
+  unpaid_blance: 1.5
+
+two:
+  liability_id: 1
+  borrower_id: 1
+  company_name: MyString
+  company_address_line_1: MyString
+  company_address_line_2: MyString
+  company_city: MyString
+  company_state: MyString
+  company_zip_code: MyString
+  account_number: MyString
+  monthly_payment: 1.5
+  months_left_to_pay: 1
+  unpaid_blance: 1.5

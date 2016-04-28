@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  declaration_id: 1
+  borrower_id: 1
+  federal_debt_default_flg: false
+  obligation_flg: false
+  down_payment_borrowed_flg: false
+  co_maker_endorser_flg: false
+  us_citizen_flg: false
+  permanent_resident_alien_flg: false
+  occupy_as_primary_residence_flg: false
+  type_of_property_owned: MyString
+  title_holding_type: MyString
+
+two:
+  declaration_id: 1
+  borrower_id: 1
+  federal_debt_default_flg: false
+  obligation_flg: false
+  down_payment_borrowed_flg: false
+  co_maker_endorser_flg: false
+  us_citizen_flg: false
+  permanent_resident_alien_flg: false
+  occupy_as_primary_residence_flg: false
+  type_of_property_owned: MyString
+  title_holding_type: MyString

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employment:</strong>
+  <%= @employment.employment_id %>
+</p>
+
+<p>
+  <strong>Borrower:</strong>
+  <%= @employment.borrower_id %>
+</p>
+
+<p>
+  <strong>Employer name:</strong>
+  <%= @employment.employer_name %>
+</p>
+
+<p>
+  <strong>Address line 1:</strong>
+  <%= @employment.address_line_1 %>
+</p>
+
+<p>
+  <strong>Address line 2:</strong>
+  <%= @employment.address_line_2 %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @employment.state %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @employment.zip_code %>
+</p>
+
+<p>
+  <strong>Employed date from:</strong>
+  <%= @employment.employed_date_from %>
+</p>
+
+<p>
+  <strong>Employed date to:</strong>
+  <%= @employment.employed_date_to %>
+</p>
+
+<p>
+  <strong>Self employed flg:</strong>
+  <%= @employment.self_employed_flg %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @employment.position %>
+</p>
+
+<p>
+  <strong>Business phone:</strong>
+  <%= @employment.business_phone %>
+</p>
+
+<p>
+  <strong>Monthly income:</strong>
+  <%= @employment.monthly_income %>
+</p>
+
+<%= link_to 'Edit', edit_employment_path(@employment) %> |
+<%= link_to 'Back', employments_path %>

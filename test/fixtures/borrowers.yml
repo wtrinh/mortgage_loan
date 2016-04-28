@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  borrower_id: 1
+  mortgage_id: 1
+  borrower_type: MyString
+  first_name: MyString
+  last_name: MyString
+  social_security_number: MyString
+  home_phone: MyString
+  dob: 2015-10-17
+  years_school: 1
+  marriage_status: MyString
+  number_of_dependents: 1
+  home_address_line_1: MyString
+  home_address_line_2: MyString
+  own_or_rent: false
+  years_of_residence: 1
+  mailing_address_line_1: MyString
+  mailing_address_line_2: MyString
+
+two:
+  borrower_id: 1
+  mortgage_id: 1
+  borrower_type: MyString
+  first_name: MyString
+  last_name: MyString
+  social_security_number: MyString
+  home_phone: MyString
+  dob: 2015-10-17
+  years_school: 1
+  marriage_status: MyString
+  number_of_dependents: 1
+  home_address_line_1: MyString
+  home_address_line_2: MyString
+  own_or_rent: false
+  years_of_residence: 1
+  mailing_address_line_1: MyString
+  mailing_address_line_2: MyString

@@ -1,0 +1,113 @@
+<%= form_for(@mortgage, html: { class: "form-horizontal"}) do |f| %>
+  <% if @mortgage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mortgage.errors.count, "error") %> prohibited this mortgage from being saved:</h2>
+
+      <ul>
+      <% @mortgage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :mortgage_type, class: "col-sm-3 control-label" %>
+    <div class="col-sm-7">
+      <%= f.select :mortgage_type, options_for_select(MortgageLoanConstants::MortgageTypes, selected: @mortgage.mortgage_type), {prompt: 'Select Mortgage Type'}, {required: true} %>
+    </div>  
+  </div>
+  <div class="form-group">
+    <%= f.label :amount, class: "col-sm-3 control-label" %>
+    <div class="col-sm-7">
+      <%= f.text_field :amount, required: true %>
+    </div>
+  </div>  
+  <div class="form-group">
+    <%= f.label :interest_rate, class: "col-sm-3 control-label" %>
+    <div class="col-sm-7">
+      <%= f.text_field :interest_rate, required: true %>
+    </div>
+  </div>  
+  <div class="form-group">
+    <%= f.label :number_of_months, class: "col-sm-3 control-label" %>
+    <div class="col-sm-7">
+      <%= f.text_field :number_of_months, required: true %>
+    </div>
+  </div>  
+  <div class="form-group">
+    <%= f.label :amortization_type, class: "col-sm-3 control-label" %>
+    <div class="col-sm-7">
+      <%= f.select :amortization_type, options_for_select(MortgageLoanConstants::AmortizationTypes, selected: @mortgage.amortization_type), {prompt: 'Select Amortization Type'}, {required: true} %>
+    </div>
+  </div>  
+
+  <h4 class="top_divider bottom_divider">Property Info.</h4>
+
+  <%= f.fields_for :property do |property_form| %>
+    <div class="form-group">
+      <%= property_form.label :address_line_1, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.text_field :address_line_1, size: "30", required: true %>
+      </div>  
+    </div>
+    <div class="form-group">
+      <%= property_form.label :address_line_2, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.text_field :address_line_2, size: "30", required: true %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :city, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.text_field :city, size: "30", required: true %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :state, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.select :state, options_for_select(MortgageLoanConstants::State, selected: @property.state), {prompt: 'Select State'}, {required: true} %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :zip_code, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.text_field :zip_code, required: true %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :year_built, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.text_field :year_built, required: true %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :purpose_of_loan, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.select :purpose_of_loan, options_for_select(MortgageLoanConstants::PurposeOfLoan, selected: @property.purpose_of_loan), {prompt: 'Select Purpose of Loan'}, {required: true} %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :property_use, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.select :property_use, options_for_select(MortgageLoanConstants::PropertyUse, selected: @property.property_use), {prompt: 'Select Property Use'}, {required: true} %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :title_name, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.text_field :title_name, required: true %>
+      </div>
+    </div>  
+    <div class="form-group">
+      <%= property_form.label :source_of_down_payment, class: "col-sm-3 control-label" %>
+      <div class="col-sm-7">
+        <%= property_form.text_field :source_of_down_payment, required: true %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

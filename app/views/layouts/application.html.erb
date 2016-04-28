@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MortgageLoan</title>
+  <%= stylesheet_link_tag    'application' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="main-container" class="container">
+ 		<div id="main-content" class="col-xs-9">
+			<%= render 'layouts/tabs' %>
+			<div id="form-container" class="container-fluid">
+				<%= yield %>
+			</div>
+		</div>	
+	</div>	
+</body>
+</html>

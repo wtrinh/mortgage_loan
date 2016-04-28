@@ -1,0 +1,45 @@
+<%= form_for(@property) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address_line_1 %>
+    <%= f.text_field :address_line_1, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :address_line_2 %>
+    <%= f.text_field :address_line_2, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :year_built %>
+    <%= f.number_field :year_built, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :purpose_of_loan %>
+    <%= f.select :purpose_of_loan, options_for_select(MortgageLoanConstants::PurposeOfLoan, selected: @property.purpose_of_loan), {prompt: 'Select Purpose of Loan'}, {required: true} %>
+  </div>
+  <div class="field">
+    <%= f.label :property_use %>
+    <%= f.select :property_use, options_for_select(MortgageLoanConstants::PropertyUse, selected: @property.property_use), {prompt: 'Select Property Use'}, {required: true} %>
+  </div>
+  <div class="field">
+    <%= f.label :title_name %>
+    <%= f.text_field :title_name, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :source_of_down_payemnt %>
+    <%= f.text_field :source_of_down_payemnt, required: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

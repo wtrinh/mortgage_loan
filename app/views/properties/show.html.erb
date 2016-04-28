@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address line 1:</strong>
+  <%= @property.address_line_1 %>
+</p>
+
+<p>
+  <strong>Address line 2:</strong>
+  <%= @property.address_line_2 %>
+</p>
+
+<p>
+  <strong>Year built:</strong>
+  <%= @property.year_built %>
+</p>
+
+<p>
+  <strong>Purpose of loan:</strong>
+  <%= @property.purpose_of_loan %>
+</p>
+
+<p>
+  <strong>Property use:</strong>
+  <%= @property.property_use %>
+</p>
+
+<p>
+  <strong>Title name:</strong>
+  <%= @property.title_name %>
+</p>
+
+<p>
+  <strong>Source of down payemnt:</strong>
+  <%= @property.source_of_down_payemnt %>
+</p>
+
+<%= link_to 'Edit', edit_mortgage_property_path(@mortgage, @property) %>

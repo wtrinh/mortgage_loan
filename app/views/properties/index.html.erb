@@ -1,0 +1,41 @@
+<h1>Listing properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Mortgage</th>
+      <th>Address line 1</th>
+      <th>Address line 2</th>
+      <th>Year built</th>
+      <th>Purpose of loan</th>
+      <th>Property use</th>
+      <th>Title name</th>
+      <th>Source of down payemnt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.property_id %></td>
+        <td><%= property.mortgage_id %></td>
+        <td><%= property.address_line_1 %></td>
+        <td><%= property.address_line_2 %></td>
+        <td><%= property.year_built %></td>
+        <td><%= property.purpose_of_loan %></td>
+        <td><%= property.property_use %></td>
+        <td><%= property.title_name %></td>
+        <td><%= property.source_of_down_payemnt %></td>
+        <td><%= link_to 'Show', property %></td>
+        <td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_mortgage_property_path %>

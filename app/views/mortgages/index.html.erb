@@ -1,0 +1,33 @@
+<h1>Listing mortgages</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Mortgage ID</th>
+      <th>Mortgage type</th>
+      <th>Amount</th>
+      <th>Interest rate</th>
+      <th>Number of months</th>
+      <th>Amrotization type</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mortgages.each do |mortgage| %>
+      <tr>
+        <td><%= mortgage.id %></td>
+        <td><%= mortgage.mortgage_type %></td>
+        <td><%= mortgage.amount %></td>
+        <td><%= mortgage.interest_rate %></td>
+        <td><%= mortgage.number_of_months %></td>
+        <td><%= mortgage.amortization_type %></td>
+        <td><%= link_to 'Edit', edit_mortgage_path(mortgage) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="field">
+  <%= link_to 'New Mortgage', new_mortgage_path, id: "new_mortgage_link" %>
+</div>  

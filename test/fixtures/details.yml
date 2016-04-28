@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  detail_id: 1
+  mortgage_id: 1
+  purchase_price: 1.5
+  alteration_cost: 1.5
+  land_cost: 1.5
+  refinance_amount: 1.5
+  estimated_prepaid_items: 1.5
+  estimated_closing_costs: 1.5
+  pmi_mip_funding_fee: 1.5
+  discount_amount: 1.5
+  subordinate_financing: 1.5
+  closing_costs_paid_by_seller: 1.5
+  other_credits: 1.5
+  other_credits_note: MyText
+  loan_amount: 1.5
+  pmi_mip_funding_fee_financed_amount: 1.5
+
+two:
+  detail_id: 1
+  mortgage_id: 1
+  purchase_price: 1.5
+  alteration_cost: 1.5
+  land_cost: 1.5
+  refinance_amount: 1.5
+  estimated_prepaid_items: 1.5
+  estimated_closing_costs: 1.5
+  pmi_mip_funding_fee: 1.5
+  discount_amount: 1.5
+  subordinate_financing: 1.5
+  closing_costs_paid_by_seller: 1.5
+  other_credits: 1.5
+  other_credits_note: MyText
+  loan_amount: 1.5
+  pmi_mip_funding_fee_financed_amount: 1.5

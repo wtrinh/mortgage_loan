@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cash_holding_id: 1
+  borrower_id: 1
+  value: 1.5
+
+two:
+  cash_holding_id: 1
+  borrower_id: 1
+  value: 1.5

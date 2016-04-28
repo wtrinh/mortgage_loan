@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mortgage type:</strong>
+  <%= @mortgage.mortgage_type %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @mortgage.amount %>
+</p>
+
+<p>
+  <strong>Interest rate:</strong>
+  <%= @mortgage.interest_rate %>
+</p>
+
+<p>
+  <strong>Number of months:</strong>
+  <%= @mortgage.number_of_months %>
+</p>
+
+<p>
+  <strong>Amrotization type:</strong>
+  <%= @mortgage.amortization_type %>
+</p>
+
+<%= link_to 'Edit', edit_mortgage_path(@mortgage) %>

@@ -1,0 +1,45 @@
+<h1>Listing declarations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Declaration</th>
+      <th>Borrower</th>
+      <th>Federal debt default flg</th>
+      <th>Obligation flg</th>
+      <th>Down payment borrowed flg</th>
+      <th>Co maker endorser flg</th>
+      <th>Us citizen flg</th>
+      <th>Permanent resident alien flg</th>
+      <th>Occupy as primary residence flg</th>
+      <th>Type of property owned</th>
+      <th>Title holding type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @declarations.each do |declaration| %>
+      <tr>
+        <td><%= declaration.declaration_id %></td>
+        <td><%= declaration.borrower_id %></td>
+        <td><%= declaration.federal_debt_default_flg %></td>
+        <td><%= declaration.obligation_flg %></td>
+        <td><%= declaration.down_payment_borrowed_flg %></td>
+        <td><%= declaration.co_maker_endorser_flg %></td>
+        <td><%= declaration.us_citizen_flg %></td>
+        <td><%= declaration.permanent_resident_alien_flg %></td>
+        <td><%= declaration.occupy_as_primary_residence_flg %></td>
+        <td><%= declaration.type_of_property_owned %></td>
+        <td><%= declaration.title_holding_type %></td>
+        <td><%= link_to 'Show', declaration %></td>
+        <td><%= link_to 'Edit', edit_declaration_path(declaration) %></td>
+        <td><%= link_to 'Destroy', declaration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Declaration', new_declaration_path %>

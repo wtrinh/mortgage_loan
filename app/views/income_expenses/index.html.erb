@@ -1,0 +1,55 @@
+<h1>Listing income_expenses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Income expense</th>
+      <th>Borrower</th>
+      <th>Base income</th>
+      <th>Over time</th>
+      <th>Bonuses</th>
+      <th>Commissions</th>
+      <th>Dividends interest</th>
+      <th>Net rental income</th>
+      <th>Other income</th>
+      <th>Rent</th>
+      <th>First mortgage</th>
+      <th>Other financing</th>
+      <th>Harzard insurance</th>
+      <th>Real estate taxes</th>
+      <th>Mortage insurance</th>
+      <th>Home owner assn dues</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @income_expenses.each do |income_expense| %>
+      <tr>
+        <td><%= income_expense.income_expense_id %></td>
+        <td><%= income_expense.borrower_id %></td>
+        <td><%= income_expense.base_income %></td>
+        <td><%= income_expense.over_time %></td>
+        <td><%= income_expense.bonuses %></td>
+        <td><%= income_expense.commissions %></td>
+        <td><%= income_expense.dividends_interest %></td>
+        <td><%= income_expense.net_rental_income %></td>
+        <td><%= income_expense.other_income %></td>
+        <td><%= income_expense.rent %></td>
+        <td><%= income_expense.first_mortgage %></td>
+        <td><%= income_expense.other_financing %></td>
+        <td><%= income_expense.harzard_insurance %></td>
+        <td><%= income_expense.real_estate_taxes %></td>
+        <td><%= income_expense.mortage_insurance %></td>
+        <td><%= income_expense.home_owner_assn_dues %></td>
+        <td><%= link_to 'Show', income_expense %></td>
+        <td><%= link_to 'Edit', edit_income_expense_path(income_expense) %></td>
+        <td><%= link_to 'Destroy', income_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Income expense', new_income_expense_path %>

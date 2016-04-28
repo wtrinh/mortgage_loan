@@ -1,0 +1,61 @@
+<%= form_for([@borrower, @employment]) do |f| %>
+  <% if @employment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employment.errors.count, "error") %> prohibited this employment from being saved:</h2>
+
+      <ul>
+      <% @employment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employer_name %><br>
+    <%= f.text_field :employer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address_line_1 %><br>
+    <%= f.text_field :address_line_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address_line_2 %><br>
+    <%= f.text_field :address_line_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :employed_date_from %><br>
+    <%= f.date_select :employed_date_from %>
+  </div>
+  <div class="field">
+    <%= f.label :employed_date_to %><br>
+    <%= f.date_select :employed_date_to %>
+  </div>
+  <div class="field">
+    <%= f.label :self_employed_flg %><br>
+    <%= f.check_box :self_employed_flg %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :business_phone %><br>
+    <%= f.text_field :business_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :monthly_income %><br>
+    <%= f.text_field :monthly_income %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

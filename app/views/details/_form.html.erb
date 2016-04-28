@@ -1,0 +1,73 @@
+<%= form_for([@mortgage, @detail]) do |f| %>
+  <% if @detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
+
+      <ul>
+      <% @detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :purchase_price %>
+    <%= f.text_field :purchase_price, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :alteration_cost %>
+    <%= f.text_field :alteration_cost, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :land_cost %>
+    <%= f.text_field :land_cost, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :refinance_amount %>
+    <%= f.text_field :refinance_amount, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_prepaid_items %>
+    <%= f.text_field :estimated_prepaid_items, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_closing_costs %>
+    <%= f.text_field :estimated_closing_costs, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :pmi_mip_funding_fee %>
+    <%= f.text_field :pmi_mip_funding_fee, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :discount_amount %>
+    <%= f.text_field :discount_amount, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :subordinate_financing %>
+    <%= f.text_field :subordinate_financing, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :closing_costs_paid_by_seller %>
+    <%= f.text_field :closing_costs_paid_by_seller, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :other_credits %>
+    <%= f.text_field :other_credits, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :other_credits_note %>
+    <%= f.text_area :other_credits_note, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_amount %>
+    <%= f.text_field :loan_amount, required: true %>
+  </div>
+  <div class="field">
+    <%= label_tag 'PMI/MIP Funding fee financed amt' %>
+    <%= f.text_field :pmi_mip_funding_fee_financed_amount, required: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

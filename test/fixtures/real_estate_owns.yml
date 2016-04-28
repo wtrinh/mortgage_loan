@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  real_estate_own_id: 1
+  address_line_1: MyString
+  address_line_2: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  property_type: MyString
+  present_market_value: 1.5
+  amount_of_mortgage: 1.5
+  gross_rental_income: 1.5
+  mortgage_payment: 1.5
+  insurance_maintenance_taxes: 1.5
+  net_rental_income: 1.5
+  property_status: MyString
+
+two:
+  real_estate_own_id: 1
+  address_line_1: MyString
+  address_line_2: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  property_type: MyString
+  present_market_value: 1.5
+  amount_of_mortgage: 1.5
+  gross_rental_income: 1.5
+  mortgage_payment: 1.5
+  insurance_maintenance_taxes: 1.5
+  net_rental_income: 1.5
+  property_status: MyString

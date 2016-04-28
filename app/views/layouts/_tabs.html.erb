@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+			<%= tabs_tag :open_tabs => { :id => "tabs_container" } do |tab| %>
+				<%= tab.mortgages 'Mortgages', get_tab_url('mortgages') %>
+				<%= tab.mortgage_info 'Mortgage Info.', get_tab_url('mortgage_info') %>
+				<%= tab.borrowers 'Borrowers', get_tab_url('borrowers') %>
+				<%= tab.employments 'Employments Info.', get_tab_url('employments') %>
+				<%= tab.income_expenses 'Income & Expenses', get_tab_url('income_expenses') %>
+				<%= tab.assets_liabilities 'Assets & Liabilities', get_tab_url('assets_liabilities') %>
+				<%= tab.details 'Details of Transaction', get_tab_url('details_of_transaction') %>
+				<%= tab.declarations 'Declarations', get_tab_url('declarations') %>
+			<% end %>
+		</div>
+	</div>
+</nav>			

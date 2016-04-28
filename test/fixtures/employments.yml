@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employment_id: 1
+  borrower_id: 1
+  employer_name: MyString
+  address_line_1: MyString
+  address_line_2: MyString
+  state: MyString
+  zip_code: MyString
+  employed_date_from: 2015-10-17
+  employed_date_to: 2015-10-17
+  self_employed_flg: false
+  position: MyString
+  business_phone: MyString
+  monthly_income: 1.5
+
+two:
+  employment_id: 1
+  borrower_id: 1
+  employer_name: MyString
+  address_line_1: MyString
+  address_line_2: MyString
+  state: MyString
+  zip_code: MyString
+  employed_date_from: 2015-10-17
+  employed_date_to: 2015-10-17
+  self_employed_flg: false
+  position: MyString
+  business_phone: MyString
+  monthly_income: 1.5

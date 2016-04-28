@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  income_expense_id: 1
+  borrower_id: 1
+  base_income: 1.5
+  over_time: 1.5
+  bonuses: 1.5
+  commissions: 1.5
+  dividends_interest: 1.5
+  net_rental_income: 1.5
+  other_income: 1.5
+  rent: 1.5
+  first_mortgage: 1.5
+  other_financing: 1.5
+  harzard_insurance: 1.5
+  real_estate_taxes: 1.5
+  mortage_insurance: 1.5
+  home_owner_assn_dues: 1.5
+
+two:
+  income_expense_id: 1
+  borrower_id: 1
+  base_income: 1.5
+  over_time: 1.5
+  bonuses: 1.5
+  commissions: 1.5
+  dividends_interest: 1.5
+  net_rental_income: 1.5
+  other_income: 1.5
+  rent: 1.5
+  first_mortgage: 1.5
+  other_financing: 1.5
+  harzard_insurance: 1.5
+  real_estate_taxes: 1.5
+  mortage_insurance: 1.5
+  home_owner_assn_dues: 1.5

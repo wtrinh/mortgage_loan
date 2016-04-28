@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property_id: 1
+  mortgage_id: 1
+  address_line_1: MyString
+  address_line_2: MyString
+  year_built: 1
+  purpose_of_loan: MyString
+  property_use: MyString
+  title_name: MyString
+  source_of_down_payemnt: MyString
+
+two:
+  property_id: 1
+  mortgage_id: 1
+  address_line_1: MyString
+  address_line_2: MyString
+  year_built: 1
+  purpose_of_loan: MyString
+  property_use: MyString
+  title_name: MyString
+  source_of_down_payemnt: MyString

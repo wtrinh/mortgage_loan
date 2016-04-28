@@ -1,0 +1,55 @@
+<h1>Listing details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Detail</th>
+      <th>Mortgage</th>
+      <th>Purchase price</th>
+      <th>Alteration cost</th>
+      <th>Land cost</th>
+      <th>Refinance amount</th>
+      <th>Estimated prepaid items</th>
+      <th>Estimated closing costs</th>
+      <th>Pmi mip funding fee</th>
+      <th>Discount amount</th>
+      <th>Subordinate financing</th>
+      <th>Closing costs paid by seller</th>
+      <th>Other credits</th>
+      <th>Other credits note</th>
+      <th>Loan amount</th>
+      <th>Pmi mip funding fee financed amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr>
+        <td><%= detail.detail_id %></td>
+        <td><%= detail.mortgage_id %></td>
+        <td><%= detail.purchase_price %></td>
+        <td><%= detail.alteration_cost %></td>
+        <td><%= detail.land_cost %></td>
+        <td><%= detail.refinance_amount %></td>
+        <td><%= detail.estimated_prepaid_items %></td>
+        <td><%= detail.estimated_closing_costs %></td>
+        <td><%= detail.pmi_mip_funding_fee %></td>
+        <td><%= detail.discount_amount %></td>
+        <td><%= detail.subordinate_financing %></td>
+        <td><%= detail.closing_costs_paid_by_seller %></td>
+        <td><%= detail.other_credits %></td>
+        <td><%= detail.other_credits_note %></td>
+        <td><%= detail.loan_amount %></td>
+        <td><%= detail.pmi_mip_funding_fee_financed_amount %></td>
+        <td><%= link_to 'Show', detail %></td>
+        <td><%= link_to 'Edit', edit_detail_path(detail) %></td>
+        <td><%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detail', new_detail_path %>
