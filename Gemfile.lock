@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/wtrinh/mortgage_loan_constants.git
-  revision: 873871b2114cec2941f29850ce275ea8170dff7a
+PATH
+  remote: ../mortgage_loan_constants
   specs:
     mortgage_loan_constants (1.0.0)
 

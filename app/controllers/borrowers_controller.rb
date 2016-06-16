@@ -16,7 +16,6 @@ class BorrowersController < ApplicationController
   def new
     redirect_to root_path if @mortgage.nil?
     @borrower = Borrower.new
-    @address = @borrower.addresses.new
   end
 
   # GET /borrowers/1/edit
